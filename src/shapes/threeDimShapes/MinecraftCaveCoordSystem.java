@@ -1,7 +1,7 @@
 /**
  * Date: February 13, 2022
- * Description: A system to visualize and interact with
- * Minecraft cave coordinates within a three-dimensional space
+ * Description: A system to visualize and interact
+ * with coordinates within a three-dimensional space
  * @author Matt
  * 
  */
@@ -20,7 +20,7 @@ import javax.swing.SwingUtilities;
 import shapes.twoDimShapes.Point;
 import shapes.twoDimShapes.Points;
 
-public class MinecraftCaveCoordSystem
+public class ThreeDimShapesCustomShapeTest
 {
 	private static ThreeDimShapes shape = new ThreeDimShapes();
 	private static Vertices coords = new Vertices(new double[][]
@@ -147,41 +147,4 @@ public class MinecraftCaveCoordSystem
 		// Displaying frame
 		SwingUtilities.invokeLater(() -> f.setVisible(true));
 	}
-	
-	/*
-	// TESTING Driver code
-	public static void main(String[] args)
-	{
-		// Declaring collection of 3D shapes
-		List<ThreeDimShapes> shapes = new ArrayList<ThreeDimShapes>(3);
-		
-		// Initializing shapes
-		shapes.add(new ThreeDimShapes(ThreeDimShape.ICOSAHEDRON));
-		
-		// Setting up frame components
-		JFrame f = new JFrame();
-		JPanel p = new JPanel();
-		p.setPreferredSize(new Dimension(640, 640));
-		p.setBackground(Color.orange);
-		
-		Points rots = new Points
-		(
-			new Point(Math.PI / 90, 0.02)
-		);
-		
-		var plugin = new ThreeDimShapesMouseTest(shapes, rots, p);
-		
-		// Setting up frame
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		f.setTitle("Rotating Shape");
-		f.setPreferredSize(p.getPreferredSize());
-		f.setResizable(true);
-		f.add(plugin, BorderLayout.CENTER);
-		f.pack();
-		f.setLocationRelativeTo(null);
-		
-		// Displaying frame
-		SwingUtilities.invokeLater(() -> f.setVisible(true));
-	}
-	*/
 }
